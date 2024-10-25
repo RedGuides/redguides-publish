@@ -1,0 +1,36 @@
+name: 'Redfetch Push Action'
+description: 'A GitHub Action to push resources using redfetch.'
+author: 'Redbot'
+inputs:
+  resource_id:
+    description: 'The ID of the resource to update. Must already exist on RedGuides.'
+    required: true
+  description:
+    description: 'Path to a description file (e.g., README.md) which will become the "overview" description of your resource.'
+    required: false
+    default: 'README.md'
+  version:
+    description: 'New version number (e.g., v1.0.1). Required if message is provided.'
+    required: false
+  message:
+    description: 'Version update message or path to CHANGELOG.md in "keep a changelog" format.'
+    required: false
+  file:
+    description: 'Path to your zipped release file.'
+    required: false
+  domain:
+    description: 'Domain to prepend to relative URLs (e.g., https://raw.githubusercontent.com/yourusername/yourrepo/main/).'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.resource_id }}
+    - ${{ inputs.description }}
+    - ${{ inputs.version }}
+    - ${{ inputs.message }}
+    - ${{ inputs.file }}
+    - ${{ inputs.domain }}
+branding:
+  icon: 'upload-cloud'
+  color: 'red'
