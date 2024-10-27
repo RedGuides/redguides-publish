@@ -1,5 +1,5 @@
-name: 'Redfetch Push Action'
-description: 'A GitHub Action to push resources using redfetch.'
+name: 'Redguides Publish'
+description: 'Update a resource on RedGuides with a release file and optionally a description and changelog.'
 author: 'Redbot'
 inputs:
   resource_id:
