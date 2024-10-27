@@ -23,7 +23,7 @@ All inputs are optional except for `resource_id`. `version` and `message` requir
 
 - `REDGUIDES_API_KEY`: **Required**. Your RedGuides API key. This should be set as a secret in your GitHub repository.
 
-You can obtain your RedGuides API key by checking your "Credential Manager" -> "Windows Credentials" -> "api_key@RedFetch" in windows, or you can DM me (Redbot) on the site. 
+You can obtain a permanent RedGuides API key by asking me (Redbot) on the site. 
 
 ## Example workflow
 ```yaml
