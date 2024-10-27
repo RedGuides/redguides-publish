@@ -57,6 +57,6 @@ jobs:
 ```
 
 ## Notes
-
 - **resource_id**: the numbers at the end of your resource URL. e.g. `https://www.redguides.com/community/resources/inzone.3174/` -> `3174`
 - **REDGUIDES_API_KEY**: Make sure to add your API key to your repository secrets under `REDGUIDES_API_KEY`.
+- This action is a wrapper around [md2bbcode](https://github.com/RedGuides/md2bbcode) and [redfetch](https://github.com/RedGuides/redfetch). I can pare it down considerably if you'd like, just ask. 
