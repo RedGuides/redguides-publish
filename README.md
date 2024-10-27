@@ -51,7 +51,7 @@ jobs:
           resource_id: '12345'
           description: 'README.md'
           version: 'v1.0.1'
-          message: 'Added new features and fixed bugs.'
+          message: 'CHANGELOG.md'
           file: 'release.zip'
           domain: 'https://raw.githubusercontent.com/yourusername/yourrepo/main/'
 ```
