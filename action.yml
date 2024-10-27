@@ -8,7 +8,6 @@ inputs:
   description:
     description: 'Path to a description file (e.g., README.md) which will become the "overview" description of your resource.'
     required: false
-    default: 'README.md'
   version:
     description: 'New version number (e.g., v1.0.1). Required if message is provided.'
     required: false
