@@ -1,6 +1,6 @@
 # RedGuides Publish
 
-Update resources on [RedGuides](https://www.redguides.com/) with this shell script. You can call it a github action if you want. You'll need to have a `REDGUIDES_API_KEY` secret in your repository, and of course a RedGuides API key which is easy to obtain (info below).
+Update resources on [RedGuides](https://www.redguides.com/) with this [github action](https://github.com/marketplace/actions/redguides-publish). You'll need to have a `REDGUIDES_API_KEY` secret in your repository, and of course a RedGuides API key which is easy to obtain (info below).
 
 ## Usage
 
