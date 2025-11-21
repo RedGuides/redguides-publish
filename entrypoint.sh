@@ -11,7 +11,7 @@ FILE="$5"
 DOMAIN="$6"
 
 # Build the redfetch command
-CMD="redfetch push \"$RESOURCE_ID\""
+CMD="redfetch publish \"$RESOURCE_ID\""
 
 if [ -n "$DESCRIPTION" ]; then
   CMD="$CMD --description \"$DESCRIPTION\""

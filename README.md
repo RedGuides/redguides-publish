@@ -27,14 +27,14 @@ You can obtain a permanent RedGuides API key by asking me (Redbot) on the site, 
 
 ## Example workflow
 ```yaml
-name: Push to RedGuides
+name: Publish to RedGuides
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  redfetch-push:
+  redfetch-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -43,7 +43,7 @@ jobs:
       - name: Build Zip File
         run: zip -r release.zip src/
 
-      - name: Push to RedGuides
+      - name: Publish to RedGuides
         uses: RedGuides/redguides-publish@v1
         env:
           REDGUIDES_API_KEY: ${{ secrets.REDGUIDES_API_KEY }}
@@ -59,4 +59,4 @@ jobs:
 ## Notes
 - **resource_id**: the numbers at the end of your resource URL. e.g. `https://www.redguides.com/community/resources/inzone.3174/` -> `3174`
 - **REDGUIDES_API_KEY**: Make sure to add your API key to your repository secrets under `REDGUIDES_API_KEY`.
-- This action is a wrapper around [md2bbcode](https://github.com/RedGuides/md2bbcode) and [redfetch](https://github.com/RedGuides/redfetch). I can pare it down considerably if you'd like, just ask. 
+- This action is a wrapper around [md2bbcode](https://github.com/RedGuides/md2bbcode) and [redfetch](https://github.com/RedGuides/redfetch).
