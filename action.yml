@@ -9,10 +9,10 @@ inputs:
     description: 'Path to a description file (e.g., README.md) which will become the "overview" description of your resource.'
     required: false
   version:
-    description: 'New version number (e.g., v1.0.1). Required if message is provided.'
+    description: 'New version number (e.g., v1.0.1). Required if message is provided (used as the update title).'
     required: false
   message:
-    description: 'Version update message or path to CHANGELOG.md in "keep a changelog" format.'
+    description: 'Version update message or path to a file (e.g., CHANGELOG.md). If provided, version is required (used as the update title).'
     required: false
   file:
     description: 'Path to your zipped release file.'

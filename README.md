@@ -6,18 +6,27 @@ Update resources on [RedGuides](https://www.redguides.com/) with this [github ac
 
 This action will update an existing resource on redguides.com to which you have ownership/team access.
 
-All inputs are optional except for `resource_id`. `version` and `message` require one another.
+All inputs are optional except for `resource_id`. If you provide `message`, you must also provide `version` (it's used as the update title).
 
 ## Inputs
 
-| Name           | Description                                                                                                                                              | Required |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| `resource_id`  | The ID of the resource to update. Must already exist on RedGuides.                                                                                       | `true`   |
-| `description`  | Path to a description file (e.g., `README.md`) which will become the "overview" description of your resource.                                            | `false`  |
-| `version`      | New version number (e.g., `v1.0.1`). Required if a message is provided.                                                                                  | `false`  |
-| `message`      | Version update message or path to `CHANGELOG.md` in "keep a changelog" format. Requires `version`.                                                       | `false`  |
-| `file`         | Path to your single, zipped/compiled release file.                                                                                                                        | `false`  |
-| `domain`       | Only used for markdown files that contain relative URLs. This will prepend the domain to relative URLs (e.g., `https://raw.githubusercontent.com/yourusername/yourrepo/main/`). | `false`  |
+- **resource_id** (required):  
+  The ID of the resource to update. Must already exist on RedGuides.
+
+- **description** (optional):  
+  Path to a description file (e.g., `README.md`) which will become the "overview" description of your resource.
+
+- **version** (required if message is provided)  
+  New version number for the release (e.g., `v1.0.1`). Used as the update title when posting a `message`. Recommended when uploading a `file` (otherwise XenForo defaults to today's date).  
+
+- **message** (optional):  
+  Version update message (plain text), or path to a file (like `CHANGELOG.md`) ideally in "keep a changelog" format. If provided, requires `version` (used as the update title).  
+
+- **file** (optional):  
+  Path to your single, zipped/compiled release file. If `version` is omitted, XenForo will default the version to today's date.
+
+- **domain** (optional):  
+  Only used for markdown files that contain relative URLs. This will prepend the domain to relative URLs (e.g., `https://raw.githubusercontent.com/yourusername/yourrepo/main/`).
 
 ## API Key
 
