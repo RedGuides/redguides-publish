@@ -32,7 +32,7 @@ All inputs are optional except for `resource_id`. If you provide `message`, you 
 
 - `REDGUIDES_API_KEY`: **Required**. Your RedGuides API key. This should be set as a secret in your GitHub repository.
 
-You can obtain a permanent RedGuides API key by asking me (Redbot) on the site, or by hacking a client you use for redguides. 
+You can obtain a permanent RedGuides API key on your account [security page](https://www.redguides.com/community/account/security).
 
 ## Example workflow
 ```yaml
